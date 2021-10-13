@@ -1,8 +1,11 @@
 import React, {useState} from 'react';
 import Baner from '../Components/Baner';
 import * as Yup from 'yup';
-import axios from 'axios';
 import {AppForm, AppFormFeild, SubmitButton} from './../Components/form';
+import {ToastContainer, toast} from 'react-toastify';
+import {sendMessage} from './../Services/server';
+import ProgresBar from '../Components/ProgresBar';
+import {colors} from '../constants';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required().min(6).max(264).label('Name'),
@@ -12,39 +15,46 @@ const validationSchema = Yup.object().shape({
 });
 function Contact() {
   const [visible, setVisible] = useState(false);
-  const [result, setResult] = useState(null);
 
-  const handleSubmit = async (user, resetForm) => {
-    console.log(user);
+  const handleSubmit = async (dataUser, resetForm) => {
     setVisible(true);
-    setResult(null);
-    user.email = user.email.toLowerCase();
-    await axios
-      .post(`http:google.com/contact`, JSON.stringify(user), {
-        headers: {
-          'Content-Type': 'application/json',
-        },
-      })
-      .then(res => {
-        setResult(
-          'با تشکر. پیام شما دریافت شد پس از بررسی و پاسخ داده می شود.',
-        );
-        setVisible(false);
+    try {
+      const {data, status} = await sendMessage(dataUser);
+      if (status === 201) {
+        toast.success(data.message, {
+          position: 'top-right',
+          closeOnClick: true,
+        });
         resetForm();
-      })
-      .catch(err => {
-        setResult('متاسفانه مشکلی در ارسال پیام پیش آمده لطفا بعدا تلاش کنید');
+        setTimeout(() => {
+          setVisible(false);
+        }, 1000);
+      }
+    } catch (error) {
+      if (!!error.message) {
+        if (error.response !== undefined) {
+          toast.error(error.response.data.message, {
+            position: 'top-right',
+            closeOnClick: true,
+          });
+        } else {
+          toast.error('Error from server', {
+            position: 'top-right',
+            closeOnClick: true,
+          });
+        }
+      }
+      setTimeout(() => {
         setVisible(false);
-      });
-
-    setTimeout(() => {
-      setResult(null);
-    }, 3000);
+      }, 1000);
+    }
   };
   return (
-    <div>
+    <>
       <Baner title="READ ABOUT ME" subTitle="CONTACTS" />
-      <div className="w-screen justify-center">
+      <div
+        style={{backgroundColor: colors.background}}
+        className="sticky w-screen md:-mt-10 lg:-mt-40 xl:-mt-64 2xl:-mt-96 justify-center z-10 ">
         <h3 className="text-white text-center my-8 text-2xl">Get in touch</h3>
         <div className="flex items-center">
           <AppForm
@@ -54,7 +64,9 @@ function Contact() {
               subject: '',
               message: '',
             }}
-            onSubmit={(user, {resetForm}) => handleSubmit(user, resetForm)}
+            onSubmit={(dataUser, {resetForm}) =>
+              handleSubmit(dataUser, resetForm)
+            }
             validationSchema={validationSchema}>
             <div className="lg:w-2/3 2xl:w-1/2">
               <AppFormFeild name="fullName" type="text" placeholder="name*" />
@@ -65,9 +77,6 @@ function Contact() {
                 placeholder="subject *"
               />
             </div>
-            {visible && (
-              <div className="flex absolute z-50 ">{/* <Progress /> */}</div>
-            )}
             <div className="lg:w-4/5">
               <AppFormFeild
                 textArea={true}
@@ -76,16 +85,13 @@ function Contact() {
                 placeholder="Message *"
               />
             </div>
-            {result && (
-              <div className="bg-red-400 m-3 w-max p-2 text-white font-bold rounded-2xl">
-                <h4>{result}</h4>
-              </div>
-            )}
             <SubmitButton title="SEND MESSAGE" />
           </AppForm>
+          <ToastContainer theme="colored" />
+          {visible && <ProgresBar loading={visible} />}
         </div>
       </div>
-    </div>
+    </>
   );
 }
 
