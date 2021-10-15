@@ -7,6 +7,7 @@ import {sendMessage} from './../Services/server';
 import ProgresBar from '../Components/ProgresBar';
 import {colors} from '../constants';
 import ABOUTALLY from '../Components/HomeComponents/ABOUTALLY';
+import UPCOMINGEVENTS from './../Components/HomeComponents/UPCOMINGEVENTS';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required().min(6).max(264).label('Name'),
@@ -54,7 +55,7 @@ function Home() {
     console.log('ticket');
   };
   return (
-    <div className=" relative 2xl:container h-full">
+    <>
       <Baner
         onClick={handleBuyTicket}
         title="NEW HOUSE"
@@ -63,10 +64,15 @@ function Home() {
       />
       <div
         style={{backgroundColor: colors.background}}
-        className="relative md:-mt-10 lg:-mt-40 xl:-mt-64 justify-center z-10 ">
+        className="flex w-full justify-center items-center 2xl:container mx-auto z-10 mt-72 lg:pt-24 ">
         <ABOUTALLY />
       </div>
-    </div>
+      <div
+        style={{backgroundColor: colors.secondary}}
+        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        <UPCOMINGEVENTS />
+      </div>
+    </>
   );
 }
 

@@ -4,17 +4,17 @@ import AppBtn from '../appBtn';
 
 const ABOUTALLY = props => {
   return (
-    <div className="flex justify-center py-6 px-2  lg:grid lg:grid-cols-2 lg:gap-3">
-      <div className="m-4  ">
-        <h1 className="text-white text-3xl my-4 ml-4">
+    <div className="flex flex-col my-20 lg:grid w-full px-6 lg:grid-cols-2 lg:gap-3">
+      <div>
+        <h1 className="text-white text-3xl my-8">
           ------ ABOUT <badge className="text-red-500">ALLY</badge>
         </h1>
-        <div className="text-gray-300 text-xl mx-2">
+        <div className="text-gray-300 text-lg">
           <p>
             Ally is an American rapper, producer and DJ best known for being a
             member of A Tribe Called Quest.
           </p>
-          <p className="text-gray-500">
+          <p className="text-gray-500 ">
             She caught the attention of audiences the world over with her
             perfect performance. American DJ and songwriter Ally`s brilliant
             performance have amazed millions of people all over the world. But
@@ -28,7 +28,7 @@ const ABOUTALLY = props => {
           </AppBtn>
         </div>
       </div>
-      <div className="flex justify-center ">
+      <div className="flex justify-center self-center w-4/5 rounded-xl overflow-hidden">
         <img src={images.homeDj} alt="homeDj" />
       </div>
     </div>
