@@ -10,7 +10,7 @@ function Nav({name, to}) {
     <NavLink
       exact
       activeStyle={activeStyleClass}
-      className="text-xs px-2 text-white"
+      className=" md:text-xs font-bold px-2 pb-2 text-white hover:text-red-500 "
       to={to}>
       <p className="w-max">{name.toUpperCase()}</p>
     </NavLink>

@@ -54,9 +54,12 @@ function Contact() {
       <Baner title="READ ABOUT ME" subTitle="CONTACTS" />
       <div
         style={{backgroundColor: colors.background}}
-        className="sticky w-screen md:-mt-10 lg:-mt-40 xl:-mt-64 2xl:-mt-96 justify-center z-10 ">
-        <h3 className="text-white text-center my-8 text-2xl">Get in touch</h3>
-        <div className="flex items-center">
+        className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
+        <h3 className="text-white text-center my-2 pb-6 text-2xl">
+          Get in touch
+        </h3>
+        <div>
+          {visible && <ProgresBar loading={visible} />}
           <AppForm
             initialValues={{
               fullName: '',
@@ -68,7 +71,7 @@ function Contact() {
               handleSubmit(dataUser, resetForm)
             }
             validationSchema={validationSchema}>
-            <div className="lg:w-2/3 2xl:w-1/2">
+            <div className="lg:w-3/4">
               <AppFormFeild name="fullName" type="text" placeholder="name*" />
               <AppFormFeild name="email" type="email" placeholder="Email*" />
               <AppFormFeild
@@ -88,7 +91,6 @@ function Contact() {
             <SubmitButton title="SEND MESSAGE" />
           </AppForm>
           <ToastContainer theme="colored" />
-          {visible && <ProgresBar loading={visible} />}
         </div>
       </div>
     </>
