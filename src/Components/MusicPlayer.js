@@ -5,7 +5,7 @@ import secondToMin from '../hooks/secondToMin';
 import AppText from './AppText';
 import './MusicPlayer.css';
 
-const MusicPlayer = ({url}) => {
+const MusicPlayer = ({url, musicName}) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [duration, setDuration] = useState(10);
   const [isMute, setIsMute] = useState(false);
@@ -89,10 +89,10 @@ const MusicPlayer = ({url}) => {
         Your browser does not support the audio element.
       </audio>
       <div>
-        <h3 className="text-xl text-gray-50 font-medium">music 1</h3>
+        <h3 className="text-sm text-gray-50 font-medium">{musicName}</h3>
       </div>
       <div
-        style={{backgroundColor: colors.background}}
+        style={{backgroundColor: colors.grey1}}
         className="grid grid-cols-11 shadow-lg rounded-lg">
         <div className="col-span-1 ">
           <div className="grid grid-cols-2 gap-4 items-end h-full">
