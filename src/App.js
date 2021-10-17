@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import loadable from '@loadable/component';
 import Footer from './Components/Footer';
-import {colors, images} from './constants';
+import {colors} from './constants';
 
 const Home = loadable(() => import('./Pages/Home'));
 const Abuot = loadable(() => import('./Pages/Abuot'));

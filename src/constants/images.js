@@ -19,6 +19,8 @@ const playlistCreation =
 const djLessions =
   'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-home-icons05.jpg';
 
+const musicTracks =
+  'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-content-bg02.jpg';
 export default {
   background,
   homeDj,
@@ -30,4 +32,5 @@ export default {
   corporateEvents,
   playlistCreation,
   djLessions,
+  musicTracks,
 };

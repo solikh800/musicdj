@@ -9,6 +9,7 @@ import {colors} from '../constants';
 import ABOUTALLY from '../Components/HomeComponents/ABOUTALLY';
 import UPCOMINGEVENTS from './../Components/HomeComponents/UPCOMINGEVENTS';
 import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
+import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required().min(6).max(264).label('Name'),
@@ -77,6 +78,11 @@ function Home() {
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
         <WHEREIPLAY />
+      </div>
+      <div
+        style={{backgroundColor: colors.secondary}}
+        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        <MUSICTRACKS />
       </div>
     </>
   );

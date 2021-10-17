@@ -7,7 +7,7 @@ const ABOUTALLY = props => {
     <div className="flex flex-col my-20 lg:grid w-full px-6 lg:grid-cols-2 lg:gap-3">
       <div>
         <h1 className="text-white text-3xl my-8">
-          ------ ABOUT <badge className="text-red-500">ALLY</badge>
+          ------ ABOUT <p className="text-red-500">ALLY</p>
         </h1>
         <div className="text-gray-300 text-lg">
           <p>

@@ -34,12 +34,12 @@ const UPCOMINGEVENTS = () => {
     <div className="flex w-screen flex-col my-20 px-6">
       <div>
         <h1 className="text-white text-3xl my-8">
-          ------ UPCOMING <badge className="text-red-500">EVENTS</badge>
+          ------ UPCOMING <p className="text-red-500">EVENTS</p>
         </h1>
         <div className="md:grid md:grid-cols-3 md:gap-4 justify-center px-4 ">
           {data.map(item => {
             return (
-              <div className="flex flex-row my-6 ">
+              <div key={item.id} className="flex flex-row my-6 ">
                 <div className="text-red-500 text-3xl xl:text-4xl font-bold font-mono pr-5">
                   <p>{item.day}</p>
                 </div>
