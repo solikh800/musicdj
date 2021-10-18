@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactPlayer from 'react-player';
-import AppText from './AppText';
 
 const VideoPlayer = ({url, videoName}) => {
   return (

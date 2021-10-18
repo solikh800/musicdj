@@ -11,6 +11,7 @@ import UPCOMINGEVENTS from './../Components/HomeComponents/UPCOMINGEVENTS';
 import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
 import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 import VIDEOS from './../Components/HomeComponents/VIDEOS';
+import MYGALLERY from './../Components/HomeComponents/MYGALLERY';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required().min(6).max(264).label('Name'),
@@ -57,6 +58,9 @@ function Home() {
   const handleBuyTicket = () => {
     console.log('ticket');
   };
+
+  const styleComponents =
+    'flex flex-col justify-center items-center 2xl:container mx-auto z-10 ';
   return (
     <>
       <Baner
@@ -72,23 +76,28 @@ function Home() {
       </div>
       <div
         style={{backgroundColor: colors.secondary}}
-        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        className={styleComponents}>
         <UPCOMINGEVENTS />
       </div>
       <div
         style={{backgroundColor: colors.background}}
-        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        className={styleComponents}>
         <WHEREIPLAY />
       </div>
       <div
         style={{backgroundColor: colors.secondary}}
-        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        className={styleComponents}>
         <MUSICTRACKS />
       </div>
       <div
         style={{backgroundColor: colors.background}}
-        className="flex flex-col justify-center items-center 2xl:container mx-auto z-10 ">
+        className={styleComponents}>
         <VIDEOS />
+      </div>
+      <div
+        style={{backgroundColor: colors.secondary}}
+        className={styleComponents}>
+        <MYGALLERY />
       </div>
     </>
   );
