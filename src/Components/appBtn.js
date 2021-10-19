@@ -2,7 +2,7 @@ import React from 'react';
 
 const AppBtn = ({children, onClick, className}) => {
   return (
-    <div className="flex flex-col w-screen items-center mt-2 mb-10 ">
+    <div className="flex flex-col w-full items-center mt-2 mb-10 ">
       <div
         onClick={onClick}
         className={

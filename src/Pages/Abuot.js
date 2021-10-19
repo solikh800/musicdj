@@ -5,6 +5,7 @@ import Icon from '../Assets/Svg/Icon/';
 import {colors} from '../constants';
 import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
 import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
+import UPCOMINGEVENTS from './../Components/AboutComponents/UPCOMINGEVENTS';
 const dataImage = [
   {
     id: 1,
@@ -125,6 +126,11 @@ function Abuot() {
         style={{backgroundColor: colors.secondary}}
         className={styleComponents}>
         <MUSICTRACKS />
+      </div>
+      <div
+        style={{backgroundColor: colors.background}}
+        className={styleComponents}>
+        <UPCOMINGEVENTS />
       </div>
     </>
   );
