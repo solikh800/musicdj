@@ -6,7 +6,11 @@ const SlideDrawer = ({onClick}) => {
   return (
     <div className="md:hidden h-screen p-4 z-50">
       <div className="absolute md:hidden left-2/3 ">
-        <Icon name="close" className="text-red-600" onClick={onClick} />
+        <Icon
+          name="close"
+          className="text-red-600 w-11 sm:w-12"
+          onClick={onClick}
+        />
       </div>
       <NavLinks />;
     </div>

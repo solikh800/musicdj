@@ -34,7 +34,11 @@ function NavBar() {
     <div className={'fixed flex-row mx-auto w-full z-40 ' + backGround}>
       {!drawerIsOpen && (
         <div className="absolute">
-          <Icon name="drawer" className="md:hidden" onClick={openDrawer} />
+          <Icon
+            name="drawer"
+            className="md:hidden w-11 sm:w-12"
+            onClick={openDrawer}
+          />
         </div>
       )}
       <div className="absolute  md:inline-block z-20 hidden">

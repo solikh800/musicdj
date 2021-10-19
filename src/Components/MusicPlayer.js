@@ -99,13 +99,13 @@ const MusicPlayer = ({url, musicName}) => {
             <Icon
               onClick={toggle}
               name={isPlaying ? 'pause' : 'play'}
-              className=" text-indigo-500  hover:text-indigo-400"
+              className=" text-indigo-500 w-8  hover:text-indigo-400"
             />
 
             <Icon
               name="stop"
               onClick={stop}
-              className=" text-indigo-500 hover:text-indigo-400"
+              className=" text-indigo-500 w-8 hover:text-indigo-400"
             />
           </div>
         </div>
@@ -139,7 +139,7 @@ const MusicPlayer = ({url, musicName}) => {
               <Icon
                 onClick={mute}
                 name={isMute ? 'mute' : 'vollume'}
-                className="text-indigo-500 hover:text-indigo-400"
+                className="text-indigo-500 w-9 hover:text-indigo-400"
               />
             </div>
           </div>
