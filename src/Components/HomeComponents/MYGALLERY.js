@@ -42,12 +42,9 @@ const data = [
 ];
 const MYGALLERY = () => {
   const [showModal, setShowModal] = useState(false);
-  const [imageModal, setImageModal] = useState();
-  const openImage = (imageUrl, imageName) => {
-    setImageModal({
-      imageUrl,
-      imageName,
-    });
+  const [indexImage, setIndexImage] = useState(1);
+  const openImage = index => {
+    setIndexImage(index);
     setShowModal(true);
   };
   return (
@@ -57,25 +54,23 @@ const MYGALLERY = () => {
           ------ MY <p className="text-red-500 ml-3"> GALLERY</p>
         </h1>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 ">
-        {data.map(item => {
+      <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 ">
+        {data.map((item, index) => {
           return (
             <ImageContainer
               key={item.id}
               imageName={item.imageName}
               url={item.imageUrl}
-              showModalComponent={() =>
-                openImage(item.imageUrl, item.imageName)
-              }
+              showModalComponent={() => openImage(index)}
             />
           );
         })}
       </div>
       {showModal ? (
         <ImageModal
-          url={imageModal.imageUrl}
+          index={indexImage}
+          data={data}
           showModal={showModal}
-          imageName={imageModal.imageName}
           hiddenModalComponent={() => setShowModal(false)}
         />
       ) : null}
