@@ -6,7 +6,7 @@ const AppBtn = ({children, onClick, className}) => {
       <div
         onClick={onClick}
         className={
-          'button w-max bg-gray-700 rounded-lg p-3 px-5 text-white font-bold hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-105 transition ease-in duration-200 cursor-pointer ' +
+          'button w-max text-sm bg-gray-700 rounded-lg p-3 px-5 text-white font-bold hover:bg-gray-500 transform hover:-translate-y-1 hover:scale-105 transition ease-in duration-200 cursor-pointer ' +
           className
         }>
         {children}
