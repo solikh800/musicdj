@@ -39,7 +39,7 @@ const UPCOMINGEVENTS = () => {
   const [state, setState] = useState(eventData[0]);
   return (
     <div>
-      <div className="flex w-screen items-start">
+      <div className="flex w-full items-start">
         <h1 className="text-white text-3xl my-8 ml-8 mr-2">------ UPCOMING </h1>
         <p className="text-red-500 text-3xl my-8">EVENTS</p>
       </div>

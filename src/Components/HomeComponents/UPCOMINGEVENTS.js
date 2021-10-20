@@ -1,6 +1,5 @@
 import React from 'react';
 import AppBtn from './../appBtn';
-import {images} from '../../constants';
 
 const data = [
   {
@@ -31,7 +30,7 @@ const data = [
 
 const UPCOMINGEVENTS = () => {
   return (
-    <div className="flex w-screen flex-col my-20 px-6">
+    <div className="flex w-full flex-col my-20 px-6">
       <div>
         <h1 className="text-white text-3xl my-8">
           ------ UPCOMING <p className="text-red-500">EVENTS</p>

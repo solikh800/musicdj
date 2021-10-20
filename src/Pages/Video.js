@@ -39,7 +39,7 @@ const data = [
 function Video() {
   return (
     <>
-      <Baner title="READ ABOUT ME" subTitle="GALLERY" />
+      <Baner title="READ ABOUT ME" subTitle="VIDEOS" />
       <div
         style={{backgroundColor: colors.background}}
         className=" flex flex-col xl:w-4/5 lg:w-5/6 justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

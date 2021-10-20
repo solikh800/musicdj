@@ -32,7 +32,7 @@ const data = [
 
 const WHEREIPLAY = () => {
   return (
-    <div className="flex w-screen flex-col xl:flex-row  my-20 px-6">
+    <div className="flex w-full flex-col xl:flex-row  my-20 px-6">
       <div className="xl:mx-6">
         <h1 className="text-white text-3xl mt-8">------ WHERE</h1>
         <h1 className=" text-3xl pl-24 mb-8 text-red-500">I PLAY</h1>

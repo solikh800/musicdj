@@ -23,7 +23,7 @@ const data = [
 const MUSICTRACKS = () => {
   return (
     <div
-      className="w-screen px-6 py-6"
+      className="w-full px-6 py-6"
       style={{
         backgroundImage: ` url(${images.musicTracks})`,
         backgroundSize: 'cover',

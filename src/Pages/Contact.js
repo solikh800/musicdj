@@ -58,7 +58,7 @@ function Contact() {
         <h3 className="text-white text-center my-2 pb-6 text-2xl">
           Get in touch
         </h3>
-        <div className="w-screen lg:w-4/5 xl:w-4/6">
+        <div className="w-full md:w-4/5 xl:w-4/6">
           {visible && <ProgresBar loading={visible} />}
           <AppForm
             initialValues={{
@@ -71,7 +71,7 @@ function Contact() {
               handleSubmit(dataUser, resetForm)
             }
             validationSchema={validationSchema}>
-            <div className="w-full">
+            <div>
               <AppFormFeild name="fullName" type="text" placeholder="name*" />
               <AppFormFeild name="email" type="email" placeholder="Email*" />
               <AppFormFeild
@@ -80,7 +80,7 @@ function Contact() {
                 placeholder="subject *"
               />
             </div>
-            <div className="w-full">
+            <div>
               <AppFormFeild
                 textArea={true}
                 type="message"

@@ -48,7 +48,7 @@ const MYGALLERY = () => {
     setShowModal(true);
   };
   return (
-    <div className="flex w-screen flex-col my-20 px-6">
+    <div className="flex w-full flex-col my-20 px-6">
       <div>
         <h1 className="flex flex-row text-white text-3xl my-8">
           ------ MY <p className="text-red-500 ml-3"> GALLERY</p>

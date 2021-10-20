@@ -73,12 +73,12 @@ function Gallery() {
       <Baner title="READ ABOUT ME" subTitle="GALLERY" />
       <div
         style={{backgroundColor: colors.background}}
-        className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
+        className=" flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
         <div className="xl:w-5/6 p-4 mt-7 md:grid md:grid-cols-2 lg:grid-cols-3 gap-2">
           {galleryData.map((item, index) => {
             return (
               <div
-                className="md:flex md:flex-col w-full mb-10 mx-3 justify-center items-center"
+                className="md:flex md:flex-col mb-10 mx-3 justify-center items-center"
                 key={item.id}>
                 <ImageContainer
                   key={item.id}

@@ -67,7 +67,7 @@ function Abuot() {
         </p>
 
         {/* slider image */}
-        <div className=" relative w-screen h-80 sm:h-96 md:h-96 lg:h-105 xl:h-115 2xl:h-120 mb-5 md:w-3/4 lg:w-4/6 xl:w-4/6">
+        <div className=" relative w-full h-80 sm:h-96 md:h-96 lg:h-105 xl:h-115 2xl:h-120 mb-5 md:w-3/4 lg:w-4/6 xl:w-4/6">
           <Icon
             name="left"
             className=" absolute text-gray-400 w-12 md:w-14 xl:w-16 z-50 bottom-1/2 left-0 "

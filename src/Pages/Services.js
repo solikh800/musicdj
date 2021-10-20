@@ -57,7 +57,7 @@ function Services() {
       <div
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
-        <div className="w-screen xl:w-5/6 p-4 mt-7">
+        <div className="xl:w-5/6 p-4 mt-7">
           {servicesData.map(item => {
             return (
               <div className="mb-10 md:grid md:grid-cols-5" key={item.id}>
