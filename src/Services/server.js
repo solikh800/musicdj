@@ -5,3 +5,6 @@ export const sendMessage = data => {
   data.email = data.email.toLowerCase();
   return http.post(`${config.localApi}/contact`, JSON.stringify(data));
 };
+export const getEvent = () => {
+  return http.get(`${config.localApi}/getevent`);
+};
