@@ -64,13 +64,13 @@ function NavBar() {
           translate + ' w-screen md:hidden  transform duration-700 flex'
         }>
         <div
-          className=" w-4/5 z-50"
+          className=" w-4/6 z-50"
           style={{backgroundColor: colors.background}}>
           <SlideDrawer onClick={closeDrawer} />
         </div>
         <div
           onClick={closeDrawer}
-          className="md:hidden w-1/5 bg-transparent z-50"></div>
+          className="md:hidden w-2/6 bg-transparent z-50"></div>
       </div>
     </div>
   );

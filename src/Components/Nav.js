@@ -1,19 +1,23 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
+import Icon from '../Assets/Svg/Icon';
 
-function Nav({name, to}) {
+function Nav({name, to, iconName}) {
   const activeStyleClass = {
     borderBottomColor: '#c22ef7',
     borderBottomWidth: 2,
   };
   return (
-    <NavLink
-      exact
-      activeStyle={activeStyleClass}
-      className=" md:text-xs font-bold px-2 pb-2 text-white hover:text-red-500 "
-      to={to}>
-      <p className="w-max">{name.toUpperCase()}</p>
-    </NavLink>
+    <div className="flex items-center w-2/3 hover:bg-gray-700 rounded-md hover:text-red-500">
+      <Icon className="md:hidden w-9 text-purple-500" name={iconName} />
+      <NavLink
+        exact
+        activeStyle={activeStyleClass}
+        className="  md:w-min text-xs py-3 flex w-36 font-bold px-2 md:pb-2 text-white "
+        to={to}>
+        <p className="w-max">{name.toUpperCase()}</p>
+      </NavLink>
+    </div>
   );
 }
 
