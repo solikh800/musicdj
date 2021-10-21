@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import Nav from '../Components/Nav';
 import Icon from '../Assets/Svg/Icon';
 import NavLinks from '../Components/NavLinks';
 import SlideDrawer from '../Components/SlideDrawer';

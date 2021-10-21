@@ -5,6 +5,13 @@ import loadable from '@loadable/component';
 import Footer from './Components/Footer';
 import {colors} from './constants';
 
+import store from './Redux/index';
+import {Provider} from 'react-redux';
+import {PersistGate} from 'redux-persist/integration/react';
+import {persistStore} from 'redux-persist';
+
+const peristedStore = persistStore(store);
+
 const Home = loadable(() => import('./Pages/Home'));
 const Abuot = loadable(() => import('./Pages/Abuot'));
 const Blog = loadable(() => import('./Pages/Blog'));
@@ -19,30 +26,34 @@ const NotFound = loadable(() => import('./Pages/NotFound'));
 
 export default function App() {
   return (
-    <BrowserRouter>
-      <div
-        style={{backgroundColor: colors.background}}
-        className="flex flex-col w-full mx-auto ">
-        <Header />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={peristedStore}>
+        <BrowserRouter>
+          <div
+            style={{backgroundColor: colors.background}}
+            className="flex flex-col w-full mx-auto ">
+            <Header />
+            {/* my Routs */}
+            <div>
+              <Switch>
+                <Route path="/abuot" component={Abuot} />
+                <Route path="/blog" component={Blog} />
+                <Route path="/contact" component={Contact} />
+                <Route path="/events" component={Events} />
+                <Route path="/gallery" component={Gallery} />
+                <Route path="/services" component={Services} />
+                <Route path="/video" component={Video} />
+                <Route path="/Discography" component={Discography} />
+                <Route path="/404" component={NotFound} />
+                <Route exact path="/" component={Home} />
+                <Route path="" component={NotFound} />
+              </Switch>
+            </div>
 
-        <div>
-          <Switch>
-            <Route path="/abuot" component={Abuot} />
-            <Route path="/blog" component={Blog} />
-            <Route path="/contact" component={Contact} />
-            <Route path="/events" component={Events} />
-            <Route path="/gallery" component={Gallery} />
-            <Route path="/services" component={Services} />
-            <Route path="/video" component={Video} />
-            <Route path="/Discography" component={Discography} />
-            <Route path="/404" component={NotFound} />
-            <Route exact path="/" component={Home} />
-            <Route path="" component={NotFound} />
-          </Switch>
-        </div>
-
-        <Footer />
-      </div>
-    </BrowserRouter>
+            <Footer />
+          </div>
+        </BrowserRouter>
+      </PersistGate>
+    </Provider>
   );
 }

@@ -6,7 +6,7 @@ const ImageModal = ({hiddenModalComponent, data, index}) => {
   const [newIndex, setNewIndex] = useState(index);
   useEffect(() => {
     setImageItem(data[index]);
-  }, []);
+  }, [data, index]);
 
   const nextImage = () => {
     if (newIndex !== data.length - 1) {

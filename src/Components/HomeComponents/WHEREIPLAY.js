@@ -1,6 +1,5 @@
 import React from 'react';
 import {images} from '../../constants';
-import AppText from './../AppText';
 
 const data = [
   {
