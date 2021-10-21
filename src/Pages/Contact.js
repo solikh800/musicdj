@@ -58,8 +58,8 @@ function Contact() {
         <h3 className="text-white text-center my-2 pb-6 text-2xl">
           Get in touch
         </h3>
+        {visible && <ProgresBar loading={visible} />}
         <div className="w-full md:w-4/5 xl:w-4/6">
-          {visible && <ProgresBar loading={visible} />}
           <AppForm
             initialValues={{
               fullName: '',

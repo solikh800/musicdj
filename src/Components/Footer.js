@@ -10,7 +10,7 @@ function Footer() {
         <img className="w-12 h-12 mr-2" src={images.logo} alt="logo" />
         <div>
           <AppText className="text-lg font-bold pb-0 mb-0 ">MUSIC</AppText>
-          <AppText className="text-lg font-bold pt-0 mt-0">ALLY</AppText>
+          <AppText className="text-lg font-bold pt-0 mt-0">SOLY</AppText>
         </div>
       </div>
 
@@ -55,7 +55,7 @@ function Footer() {
         />
       </div>
       <AppText className="text-white">
-        Copyright © 2021 MusicAlly. All Rights Reserved
+        Copyright © 2021 MusicSoly. All Rights Reserved
       </AppText>
     </div>
   );

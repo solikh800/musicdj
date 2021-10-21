@@ -49,7 +49,7 @@ function NavBar() {
             ' ' +
             backGround
           }>
-          MUSIC ALLY
+          MUSIC SOLY
           <img src={images.logo} alt="logo" className="w-10 h-10 z-50 mx-4 " />
         </button>
       </div>
