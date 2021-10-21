@@ -19,7 +19,7 @@ const SlideDrawer = ({onClick}) => {
           <h2 className="text-white font-bold">MUSIC SOLI</h2>
         </div>
         <div className="pl-2">
-          <NavLinks />;
+          <NavLinks onClick={onClick} />;
         </div>
       </div>
     </div>

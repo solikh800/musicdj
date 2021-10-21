@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import {images} from '../constants';
 import AppBtn from './appBtn';
 
@@ -14,10 +15,17 @@ function Baner({title, subTitle, onClick, date}) {
           <h2 className="text-2xl text-gray-50 font-bold sm:text-4xl z-10 ">
             {subTitle}
           </h2>
+
           {onClick && (
-            <div className="">
-              <AppBtn onClick={onClick}>BUY TICKETS</AppBtn>
-            </div>
+            <NavLink to="/events">
+              <div className="">
+                <AppBtn
+                  className="bg-red-500 hover:bg-red-800"
+                  onClick={onClick}>
+                  BUY TICKETS
+                </AppBtn>
+              </div>
+            </NavLink>
           )}
         </div>
         <div></div>

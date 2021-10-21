@@ -1,19 +1,29 @@
 import React from 'react';
 import Nav from './Nav';
 
-const NavLinks = () => {
+const NavLinks = ({onClick}) => {
   return (
-    <>
-      <Nav name="Home" to="/" iconName="home" />
-      <Nav name="Events" to="/events" iconName="event" />
-      <Nav name="Services" to="/services" iconName="service" />
-      <Nav name="Discography" to="/discography" iconName="glass" />
-      <Nav name="gallery" to="/gallery" iconName="images" />
-      <Nav name="Video" to="/video" iconName="video" />
-      <Nav name="Blog" to="/blog" iconName="blog" />
-      <Nav name="Contact" to="/contact" iconName="contact" />
-      <Nav name="Abuot Me" to="/abuot" iconName="about" />
-    </>
+    <div className="md:flex">
+      <Nav name="Home" to="/" iconName="home" onClick={onClick} />
+      <Nav name="Events" to="/events" iconName="event" onClick={onClick} />
+      <Nav
+        name="Services"
+        to="/services"
+        iconName="service"
+        onClick={onClick}
+      />
+      <Nav
+        name="Discography"
+        to="/discography"
+        iconName="glass"
+        onClick={onClick}
+      />
+      <Nav name="gallery" to="/gallery" iconName="images" onClick={onClick} />
+      <Nav name="Video" to="/video" iconName="video" onClick={onClick} />
+      <Nav name="Blog" to="/blog" iconName="blog" onClick={onClick} />
+      <Nav name="Contact" to="/contact" iconName="contact" onClick={onClick} />
+      <Nav name="Abuot Me" to="/abuot" iconName="about" onClick={onClick} />
+    </div>
   );
 };
 

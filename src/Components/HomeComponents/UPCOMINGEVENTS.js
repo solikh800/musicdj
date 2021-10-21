@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import AppBtn from './../appBtn';
 
 const data = [
@@ -33,7 +34,7 @@ const UPCOMINGEVENTS = () => {
     <div className="flex w-full flex-col my-20 px-6">
       <div>
         <h1 className="text-white text-3xl my-8">
-          ------ UPCOMING <p className="text-red-500">EVENTS</p>
+          ------ UPCOMING <p className="text-red-500 ml-24">EVENTS</p>
         </h1>
         <div className="md:grid md:grid-cols-3 md:gap-4 justify-center px-4 ">
           {data.map(item => {
@@ -53,11 +54,12 @@ const UPCOMINGEVENTS = () => {
             );
           })}
         </div>
-        <div className="flex justify-start">
+
+        <NavLink className="flex w-full items-center" to="/events">
           <AppBtn className="bg-gray-200 border-2 cursor-pointer ">
             VIEW ALL EVENTS
           </AppBtn>
-        </div>
+        </NavLink>
       </div>
     </div>
   );

@@ -6,6 +6,7 @@ const homeDj =
 
 const logo =
   'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-logo.png';
+const notfound = 'http://dl.mazanddl.ir/djsoli/notfound.png';
 
 //home WHERE I PLAY
 const weddings =
@@ -25,6 +26,7 @@ export default {
   background,
   homeDj,
   logo,
+  notfound,
 
   //home WHERE I PLAY
   weddings,

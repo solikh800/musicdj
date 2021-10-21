@@ -15,7 +15,7 @@ const Header = loadable(() => import('./Pages/Header'));
 const Services = loadable(() => import('./Pages/Services'));
 const Video = loadable(() => import('./Pages/Video'));
 const Discography = loadable(() => import('./Pages/Discography'));
-// const NotFound = loadable(() => import("./screen/notFound"));
+const NotFound = loadable(() => import('./Pages/NotFound'));
 
 export default function App() {
   return (
@@ -32,13 +32,12 @@ export default function App() {
             <Route path="/contact" component={Contact} />
             <Route path="/events" component={Events} />
             <Route path="/gallery" component={Gallery} />
-            {/* <Route path="/header" component={Header} /> */}
             <Route path="/services" component={Services} />
             <Route path="/video" component={Video} />
             <Route path="/Discography" component={Discography} />
-            {/* <Route path="/404" component={NotFound} /> */}
+            <Route path="/404" component={NotFound} />
             <Route exact path="/" component={Home} />
-            {/* <Route path="" component={NotFound} /> */}
+            <Route path="" component={NotFound} />
           </Switch>
         </div>
 

@@ -1,4 +1,5 @@
 import React from 'react';
+import {NavLink} from 'react-router-dom';
 import {images} from '../../constants';
 import AppBtn from '../appBtn';
 
@@ -7,7 +8,7 @@ const ABOUTALLY = props => {
     <div className="flex flex-col my-20 lg:grid w-full px-6 lg:grid-cols-2 lg:gap-3">
       <div>
         <h1 className="text-white text-3xl my-8">
-          ------ ABOUT <p className="text-red-500">ALLY</p>
+          ------ ABOUT <p className="text-red-500 ml-24">ALLY</p>
         </h1>
         <div className="text-gray-300 text-lg">
           <p>
@@ -23,9 +24,11 @@ const ABOUTALLY = props => {
           </p>
         </div>
         <div className="flex justify-start">
-          <AppBtn className="bg-gray-200 border-2 cursor-pointer ">
-            ABOUT ME
-          </AppBtn>
+          <NavLink to="/abuot">
+            <AppBtn className="bg-gray-200 border-2 cursor-pointer ">
+              ABOUT ME
+            </AppBtn>
+          </NavLink>
         </div>
       </div>
       <div className="flex justify-center self-center w-4/5 rounded-xl overflow-hidden">

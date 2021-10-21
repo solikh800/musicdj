@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import {NavLink} from 'react-router-dom';
 import Icon from '../../Assets/Svg/Icon';
 import AppBtn from '../appBtn';
 
@@ -70,9 +71,11 @@ const UPCOMINGEVENTS = () => {
                     {item.title}
                   </h4>
                   <p className="text-gray-400 text-sm mb-5">{item.subTitle}</p>
-                  <AppBtn className="bg-pink-500 hover:bg-pink-700">
-                    READ MORE
-                  </AppBtn>
+                  <NavLink to="/blog">
+                    <AppBtn className="bg-pink-500 hover:bg-pink-700">
+                      READ MORE
+                    </AppBtn>
+                  </NavLink>
                 </div>
               ) : null}
             </div>
