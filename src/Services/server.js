@@ -8,3 +8,6 @@ export const sendMessage = data => {
 export const getEvent = () => {
   return http.get(`${config.localApi}/getevent`);
 };
+export const getServices = () => {
+  return http.get(`${config.localApi}/getservices`);
+};
