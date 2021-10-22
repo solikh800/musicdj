@@ -11,3 +11,17 @@ export const getEvent = () => {
 export const getServices = () => {
   return http.get(`${config.localApi}/getservices`);
 };
+
+//blog routs
+export const getBlogData = pageNumber => {
+  return http.get(`${config.localApi}/getblogdata/${pageNumber}`);
+};
+export const getBlogCategory = () => {
+  return http.get(`${config.localApi}/getcategory`);
+};
+export const getBlogRecentPosts = () => {
+  return http.get(`${config.localApi}/recentposts`);
+};
+export const getBlogPostNumber = () => {
+  return http.get(`${config.localApi}/pagesnumber`);
+};
