@@ -11,6 +11,7 @@ import {
 } from '../Redux/actions/blog';
 import moment from 'moment';
 import {fullPostNumber} from './../Redux/actions/blog';
+import {NavLink} from 'react-router-dom';
 
 function Blog() {
   const dispatch = useDispatch();
@@ -63,24 +64,33 @@ function Blog() {
             dataBlog.map(item => {
               return (
                 <div key={item._id}>
-                  <h3 className="text-white text-lg hover:text-red-500 font-bold cursor-pointer">
-                    {item.title}
-                  </h3>
+                  <NavLink to={`/blog/${item._id}`}>
+                    <h3 className="text-white text-lg hover:text-red-500 font-bold cursor-pointer">
+                      {item.title}
+                    </h3>
+                  </NavLink>
                   <div className="flex items-center">
-                    <Icon name="calendar" className="w-7 text-gray-400" />
-                    <p className="text-gray-400 text-sm">
+                    <Icon
+                      name="calendar"
+                      className="w-7 mr-0 lg:text-sm cursor-text hover:text-gray-400 text-gray-400"
+                    />
+                    <p className="text-gray-400 text-xs">
                       {moment(item.date).format('DD MMM yy')}
                     </p>
                   </div>
-                  <img
-                    className="rounded-lg cursor-pointer mb-3"
-                    src={item.image}
-                    alt={item.title}
-                  />
+                  <NavLink to={`/blog/${item._id}`}>
+                    <img
+                      className="rounded-lg cursor-pointer mb-3"
+                      src={item.image}
+                      alt={item.title}
+                    />
+                  </NavLink>
                   <p className="text-gray-400 text-sm mb-5">{item.subTitle}</p>
-                  <AppBtn className="bg-red-500 hover:bg-red-700">
-                    READ MORE
-                  </AppBtn>
+                  <NavLink to={`/blog/${item._id}`}>
+                    <AppBtn className="bg-red-500 hover:bg-red-700">
+                      READ MORE
+                    </AppBtn>
+                  </NavLink>
                   <div className="border-b-2 border-gray-400 my-7" />
                 </div>
               );
@@ -110,6 +120,7 @@ function Blog() {
                       : 'text-white';
                   return (
                     <p
+                      key={`${item}+${index}`}
                       onClick={() => changePage(index + 1)}
                       className={
                         'text-center text-lg w-8 hover:text-red-500 cursor-pointer transform hover:scale-110 ' +
@@ -140,14 +151,16 @@ function Blog() {
         <div>
           {/* Category */}
           <div className=" w-full px-3 my-10">
-            <h3 className="text-white text-lg font-bold mb-3">Category</h3>
+            <h3 className="text-red-700 text-lg font-bold mb-3">Category</h3>
             {categoryBlog &&
               categoryBlog.map(item => {
                 return (
                   <div key={item}>
-                    <p className="text-white hover:text-red-500  cursor-pointer">
-                      {item}
-                    </p>
+                    <NavLink to={`/blog/category/${item}`}>
+                      <p className="text-white hover:text-red-500  cursor-pointer">
+                        {item}
+                      </p>
+                    </NavLink>
 
                     <div className="border-b-2 w-full border-gray-400 my-1" />
                   </div>
@@ -156,19 +169,25 @@ function Blog() {
           </div>
           {/* Recent Posts */}
           <div className="px-3 mt-10">
-            <h3 className="text-white text-lg font-bold mb-3">Recent Posts</h3>
+            <h3 className="text-red-700 text-lg font-bold mb-3">
+              Recent Posts
+            </h3>
             {recentsBlog &&
               recentsBlog.map(item => {
                 return (
                   <div key={item._id}>
-                    <img
-                      className="rounded-lg cursor-pointer mb-3"
-                      src={item.image}
-                      alt={item.title}
-                    />
-                    <h3 className="hover:text-white text-sm text-red-400 cursor-pointer mb-10">
-                      {item.title}
-                    </h3>
+                    <NavLink to={`/blog/${item._id}`}>
+                      <img
+                        className="rounded-lg cursor-pointer mb-3"
+                        src={item.image}
+                        alt={item.title}
+                      />
+                    </NavLink>
+                    <NavLink to={`/blog/${item._id}`}>
+                      <h3 className="hover:text-white text-sm text-gray-300 cursor-pointer mb-10">
+                        {item.title}
+                      </h3>
+                    </NavLink>
                   </div>
                 );
               })}

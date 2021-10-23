@@ -25,3 +25,12 @@ export const getBlogRecentPosts = () => {
 export const getBlogPostNumber = () => {
   return http.get(`${config.localApi}/pagesnumber`);
 };
+export const getBlogPost = id => {
+  return http.get(`${config.localApi}/postbyid/${id}`);
+};
+export const getPostByTag = tag => {
+  return http.get(`${config.localApi}/getpostbytag/${tag}`);
+};
+export const getPostByCategory = tag => {
+  return http.get(`${config.localApi}/getpostbycategory/${tag}`);
+};
