@@ -57,15 +57,17 @@ function BlogPost() {
                   />
                   <p className="text-gray-400 text-xs">{post.creator}</p>
                 </div>
-                <div className="group flex items-center  cursor-pointer">
-                  <Icon
-                    name="calendar"
-                    className="w-7 mr-0 text-gray-400 group-hover:text-purple-600 "
-                  />
-                  <p className="text-gray-400 text-xs group-hover:text-purple-600 ">
-                    {post.category}
-                  </p>
-                </div>
+                <NavLink to={`/blog/category/${post.category}`}>
+                  <div className="group flex items-center  cursor-pointer">
+                    <Icon
+                      name="folder"
+                      className="w-7 mr-0 text-gray-400 group-hover:text-purple-600 "
+                    />
+                    <p className="text-gray-400 text-xs group-hover:text-purple-600 ">
+                      {post.category}
+                    </p>
+                  </div>
+                </NavLink>
               </div>
               <img
                 className="rounded-lg mb-3"
@@ -80,15 +82,16 @@ function BlogPost() {
               </div>
               <div className="flex items-center my-10">
                 <p className="text-red-600 font-bold">Tags : </p>
-                {post.tag.map(item => {
-                  return (
-                    <NavLink to={`tag/${item}`}>
-                      <p className=" text-white text-xs lg:text-sm border-2 p-1 rounded-lg border-gray-600 hover:text-purple-600 mx-2 cursor-pointer ">
-                        {item}
-                      </p>
-                    </NavLink>
-                  );
-                })}
+                {post.tag &&
+                  post.tag.map(item => {
+                    return (
+                      <NavLink to={`tag/${item}`}>
+                        <p className=" text-white text-xs lg:text-sm border-2 p-1 rounded-lg border-gray-600 hover:text-purple-600 mx-2 cursor-pointer ">
+                          {item}
+                        </p>
+                      </NavLink>
+                    );
+                  })}
               </div>
               <div className="border-b-2 border-gray-400 my-7" />
             </div>
