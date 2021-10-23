@@ -3,6 +3,7 @@ import {useSelector, useDispatch} from 'react-redux';
 import {colors} from '../constants';
 import {fullDataServices} from '../Redux/actions/getData';
 import Baner from './../Components/Baner';
+import ReactHelmet from './../Components/ReactHelmet';
 
 function Services() {
   const dispatch = useDispatch();
@@ -14,6 +15,7 @@ function Services() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="SERVICES" />
+      <ReactHelmet title="SERVICES" />
       <div
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

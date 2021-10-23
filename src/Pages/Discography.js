@@ -1,6 +1,7 @@
 import React from 'react';
 import {colors} from '../constants';
 import Baner from './../Components/Baner';
+import ReactHelmet from './../Components/ReactHelmet';
 const discoData = [
   {
     id: 1,
@@ -36,6 +37,7 @@ function Discography() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="DISCOGRAPHY" />
+      <ReactHelmet title="DISCOGRAPHY" />
       <div
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

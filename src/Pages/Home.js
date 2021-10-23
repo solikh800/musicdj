@@ -8,6 +8,7 @@ import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
 import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 import VIDEOS from './../Components/HomeComponents/VIDEOS';
 import MYGALLERY from './../Components/HomeComponents/MYGALLERY';
+import ReactHelmet from './../Components/ReactHelmet';
 
 function Home() {
   const handleBuyTicket = () => {
@@ -24,6 +25,7 @@ function Home() {
         subTitle="MUSIC 2017"
         date="17 JANUARY, 2020"
       />
+      <ReactHelmet title="MUSIC SOLI" />
       <div
         style={{backgroundColor: colors.background}}
         className="flex w-full justify-center items-center 2xl:container mx-auto z-10 mt-72 lg:pt-24 ">

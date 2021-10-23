@@ -12,6 +12,7 @@ import {
 import moment from 'moment';
 import {fullPostNumber} from './../Redux/actions/blog';
 import {NavLink} from 'react-router-dom';
+import ReactHelmet from './../Components/ReactHelmet';
 
 function Blog() {
   const dispatch = useDispatch();
@@ -55,6 +56,7 @@ function Blog() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="BLOG" />
+      <ReactHelmet title="Blog" />
       <div
         style={{backgroundColor: colors.background}}
         className=" md:grid md:items-start md:grid-cols-4 md:gap-3 flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

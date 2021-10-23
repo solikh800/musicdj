@@ -2,6 +2,7 @@ import React from 'react';
 import {colors} from '../constants';
 import Baner from './../Components/Baner';
 import VideoPlayer from './../Components/VideoPlayer';
+import ReactHelmet from './../Components/ReactHelmet';
 
 const data = [
   {
@@ -40,6 +41,7 @@ function Video() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="VIDEOS" />
+      <ReactHelmet title="VIDEOS" />
       <div
         style={{backgroundColor: colors.background}}
         className=" flex flex-col xl:w-4/5 lg:w-5/6 justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

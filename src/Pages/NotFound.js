@@ -3,11 +3,13 @@ import {NavLink} from 'react-router-dom';
 import AppBtn from '../Components/appBtn';
 import {colors, images} from '../constants';
 import Baner from './../Components/Baner';
+import ReactHelmet from './../Components/ReactHelmet';
 
 const NotFound = () => {
   return (
     <>
       <Baner title="PAGE NOT FOUND" subTitle="404" />
+      <ReactHelmet title="Not Found" />
       <div
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

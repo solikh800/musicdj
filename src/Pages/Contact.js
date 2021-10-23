@@ -6,6 +6,7 @@ import {ToastContainer, toast} from 'react-toastify';
 import {sendMessage} from './../Services/server';
 import ProgresBar from '../Components/ProgresBar';
 import {colors} from '../constants';
+import ReactHelmet from './../Components/ReactHelmet';
 
 const validationSchema = Yup.object().shape({
   fullName: Yup.string().required().min(6).max(264).label('Name'),
@@ -52,6 +53,7 @@ function Contact() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="CONTACTS" />
+      <ReactHelmet title="Contact" />
       <div
         style={{backgroundColor: colors.background}}
         className="flex flex-col justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

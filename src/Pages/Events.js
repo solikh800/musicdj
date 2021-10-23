@@ -5,6 +5,7 @@ import {colors} from '../constants';
 import {fullDataEvent} from '../Redux/actions/getData';
 import Baner from './../Components/Baner';
 import BuyTickets from './../Components/BuyTickets';
+import ReactHelmet from './../Components/ReactHelmet';
 
 function Events() {
   const dispatch = useDispatch();
@@ -28,6 +29,7 @@ function Events() {
     <>
       {/* title and baner */}
       <Baner title="READ ABOUT ME" subTitle="UPCOMING EVENTS" />
+      <ReactHelmet title="UPCOMING EVENTS" />
 
       {/* About Me */}
       <div

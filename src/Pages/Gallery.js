@@ -3,6 +3,7 @@ import {colors} from '../constants';
 import Baner from './../Components/Baner';
 import ImageContainer from './../Components/ImageContainer';
 import ImageModal from './../Components/ImageModal';
+import ReactHelmet from './../Components/ReactHelmet';
 
 const galleryData = [
   {
@@ -71,6 +72,7 @@ function Gallery() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="GALLERY" />
+      <ReactHelmet title="GALLERY" />
       <div
         style={{backgroundColor: colors.background}}
         className=" flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

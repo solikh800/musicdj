@@ -9,6 +9,7 @@ import moment from 'moment';
 import {NavLink} from 'react-router-dom';
 import {useParams} from 'react-router';
 import {fullTagPost} from './../Redux/actions/blog';
+import ReactHelmet from '../Components/ReactHelmet';
 
 function TagPost() {
   const dispatch = useDispatch();
@@ -25,6 +26,7 @@ function TagPost() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="Tag List" />
+      <ReactHelmet title={myParams.tag} />
       <div
         style={{backgroundColor: colors.background}}
         className=" md:grid md:items-start md:grid-cols-4 md:gap-3 flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
@@ -80,8 +82,9 @@ function TagPost() {
             <p className="text-gray-400 text-sm mt-5 ">
               The budget is the most basic thing in financial planning. It is
               therefore especially important to be careful when compiling the
-              budget. To start you have to draw up your own budget for the next
-              month and only after it you may make a yearly budget.
+              budget. To start you import ReactHelmet from
+              './../Components/ReactHelmet'; have to draw up your own budget for
+              the next month and only after it you may make a yearly budget.
             </p>
             <p className="text-gray-400 text-sm mt-5">
               As the basis takes your monthly income, subtract from it such
