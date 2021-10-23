@@ -85,6 +85,7 @@ function Abuot() {
                 index + 1 === slideIndex ? 'opacity-100' : 'opacity-0';
               return (
                 <img
+                  key={index + Math.random()}
                   className={
                     'absolute overflow-hidden rounded-xl w-full h-80 sm:h-96 md:h-96 lg:h-105 xl:h-115 2xl:h-120  ' +
                     activeAnim
@@ -106,6 +107,7 @@ function Abuot() {
               };
               return (
                 <div
+                  key={index + Math.random()}
                   onClick={() => movDot(index + 1)}
                   className={
                     'w-3 h-3 cursor-pointer hover:bg-red-600 rounded-full m-2 z-50 ' +

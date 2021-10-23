@@ -37,7 +37,7 @@ function Events() {
           eventsData.map((item, index) => {
             const row = index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse';
             return (
-              <div key={item.id} className={'md:flex mt-5 p-2 ' + row}>
+              <div key={item._id} className={'md:flex mt-5 p-2 ' + row}>
                 <div className="md:col-span-3">
                   <img
                     className="rounded-lg mb-2"

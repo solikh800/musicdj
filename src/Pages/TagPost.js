@@ -15,7 +15,7 @@ function TagPost() {
   const {categoryBlog, recentsBlog, tagBlog} = useSelector(state => state.blog);
 
   const myParams = useParams();
-  console.log(myParams.tag);
+
   useEffect(() => {
     dispatch(fullDataCategory());
     dispatch(fullTagPost(myParams.tag));

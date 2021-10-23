@@ -20,7 +20,6 @@ const Category = () => {
   );
 
   const myParams = useParams();
-  console.log(myParams.tag);
   useEffect(() => {
     dispatch(fullDataCategory());
     dispatch(fullCategory(myParams.tag));

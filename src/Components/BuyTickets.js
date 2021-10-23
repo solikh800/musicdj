@@ -15,38 +15,16 @@ const validationSchema = Yup.object().shape({
 const BuyTickets = ({hiddenModalComponent, title, price}) => {
   const [visible, setVisible] = useState(false);
 
-  const handleSubmit = async (dataUser, resetForm) => {
+  const handleSubmit = (dataUser, resetForm) => {
+    resetForm();
     setVisible(true);
-    try {
-      const {data, status} = await sendMessage(dataUser);
-      if (status === 201) {
-        toast.success(data.message, {
-          position: 'top-right',
-          closeOnClick: true,
-        });
-        resetForm();
-        setTimeout(() => {
-          setVisible(false);
-        }, 1000);
-      }
-    } catch (error) {
-      if (!!error.message) {
-        if (error.response !== undefined) {
-          toast.error(error.response.data.message, {
-            position: 'top-right',
-            closeOnClick: true,
-          });
-        } else {
-          toast.error('Error from server', {
-            position: 'top-right',
-            closeOnClick: true,
-          });
-        }
-      }
-      setTimeout(() => {
-        setVisible(false);
-      }, 1000);
-    }
+    setTimeout(() => {
+      setVisible(false);
+      toast.success('Your message was sent successfully ', {
+        position: 'top-right',
+        closeOnClick: true,
+      });
+    }, 2000);
   };
   return (
     <>

@@ -21,7 +21,7 @@ function Services() {
           {servicesData &&
             servicesData.map(item => {
               return (
-                <div className="mb-10 md:grid md:grid-cols-5" key={item.id}>
+                <div className="mb-10 md:grid md:grid-cols-5" key={item._id}>
                   <div className="md:col-span-3">
                     <img
                       className="rounded-lg"

@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import loadable from '@loadable/component';
-import Footer from './Components/Footer';
-import {colors} from './constants';
-
 import store from './Redux/index';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
 import {persistStore} from 'redux-persist';
+
+import Footer from './Components/Footer';
+import {colors} from './constants';
+import './App.css';
 
 const peristedStore = persistStore(store);
 
