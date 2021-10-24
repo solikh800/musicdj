@@ -1,39 +1,39 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {colors} from '../constants';
 import Baner from './../Components/Baner';
 import ReactHelmet from './../Components/ReactHelmet';
+const imageLink = 'http://dl.mazanddl.ir/djsoli/disco/';
 const discoData = [
   {
     id: 1,
-    image:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-discography-img01.jpg',
+    image: `${imageLink}01.jpg`,
     title: 'Party Hard',
     subTitle: 'LISTEN',
   },
   {
     id: 2,
-    image:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-discography-img02.jpg',
+    image: `${imageLink}02.jpg`,
     title: 'Deep House Mix',
     subTitle: 'LISTEN',
   },
   {
     id: 3,
-    image:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-discography-img03.jpg',
+    image: `${imageLink}03.jpg`,
     title: 'Pink Clouds Electro',
     subTitle: 'LISTEN',
   },
   {
     id: 4,
-    image:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-discography-img03.jpg',
+    image: `${imageLink}03.jpg`,
     title: 'Pink Clouds Electro',
     subTitle: 'LISTEN',
   },
 ];
 
 function Discography() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="DISCOGRAPHY" />

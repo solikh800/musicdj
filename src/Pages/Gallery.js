@@ -1,65 +1,26 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {colors} from '../constants';
 import Baner from './../Components/Baner';
 import ImageContainer from './../Components/ImageContainer';
 import ImageModal from './../Components/ImageModal';
 import ReactHelmet from './../Components/ReactHelmet';
 
+const imageLink = 'http://dl.mazanddl.ir/djsoli/homegallery/';
+
 const galleryData = [
-  {
-    id: 1,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img01-bg.jpg',
-  },
-  {
-    id: 2,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img02-bg.jpg',
-  },
-  {
-    id: 3,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img03-bg.jpg',
-  },
-  {
-    id: 4,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img04-bg.jpg',
-  },
-  {
-    id: 5,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img05-bg.jpg',
-  },
-  {
-    id: 6,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img06-bg.jpg',
-  },
-  {
-    id: 7,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img07-bg.jpg',
-  },
-  {
-    id: 8,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery02-img08-bg.jpg',
-  },
-  {
-    id: 9,
-    imageName: '',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img06-bg.jpg',
-  },
+  {id: 1, imageName: 'image gallery', imageUrl: `${imageLink}gallery01.jpg`},
+  {id: 2, imageName: 'image gallery', imageUrl: `${imageLink}gallery02.jpg`},
+  {id: 3, imageName: 'image gallery', imageUrl: `${imageLink}gallery03.jpg`},
+  {id: 4, imageName: 'image gallery', imageUrl: `${imageLink}gallery04.jpg`},
+  {id: 5, imageName: 'image gallery', imageUrl: `${imageLink}gallery05.jpg`},
+  {id: 6, imageName: 'image gallery', imageUrl: `${imageLink}gallery06.jpg`},
+  {id: 7, imageName: 'image gallery', imageUrl: `${imageLink}07.jpg`},
+  {id: 8, imageName: 'image gallery', imageUrl: `${imageLink}08.jpg`},
+  {id: 9, imageName: 'image gallery', imageUrl: `${imageLink}09.jpg`},
+  {id: 10, imageName: 'image gallery', imageUrl: `${imageLink}10.jpg`},
+  {id: 11, imageName: 'image gallery', imageUrl: `${imageLink}11.jpg`},
+  {id: 12, imageName: 'image gallery', imageUrl: `${imageLink}11.jpg`},
+  {id: 13, imageName: 'image gallery', imageUrl: `${imageLink}15.jpg`},
 ];
 
 function Gallery() {
@@ -69,6 +30,9 @@ function Gallery() {
     setIndexImage(index);
     setShowModal(true);
   };
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="GALLERY" />

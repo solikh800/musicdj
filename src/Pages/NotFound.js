@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {NavLink} from 'react-router-dom';
 import AppBtn from '../Components/appBtn';
 import {colors, images} from '../constants';
@@ -6,6 +6,9 @@ import Baner from './../Components/Baner';
 import ReactHelmet from './../Components/ReactHelmet';
 
 const NotFound = () => {
+  useEffect(() => {
+    window.scrollTo(0, 250);
+  }, []);
   return (
     <>
       <Baner title="PAGE NOT FOUND" subTitle="404" />

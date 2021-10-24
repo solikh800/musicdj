@@ -11,7 +11,8 @@ function Services() {
 
   useEffect(() => {
     dispatch(fullDataServices());
-  }, []);
+    window.scrollTo(0, 0);
+  }, [dispatch]);
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="SERVICES" />

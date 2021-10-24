@@ -1,43 +1,24 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import {colors} from '../constants';
 import Baner from './../Components/Baner';
 import VideoPlayer from './../Components/VideoPlayer';
 import ReactHelmet from './../Components/ReactHelmet';
 
+const videoLinks = 'http://dl.mazanddl.ir/djsoli/videos/';
+
 const data = [
-  {
-    id: 1,
-    videoName: 'name one',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video1.mp4',
-  },
-  {
-    id: 2,
-    videoName: 'name two',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video2.mp4',
-  },
-  {
-    id: 3,
-    videoName: 'name three',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video3.mp4',
-  },
-  {
-    id: 4,
-    videoName: 'name fore',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video4.mp4',
-  },
-  {
-    id: 5,
-    videoName: 'name Five',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video5.mp4',
-  },
-  {
-    id: 6,
-    videoName: 'name Six',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/video-6.mp4',
-  },
+  {id: 1, videoName: 'name one', url: `${videoLinks}video1.mp4`},
+  {id: 2, videoName: 'name two', url: `${videoLinks}video2.mp4`},
+  {id: 3, videoName: 'name three', url: `${videoLinks}video3.mp4`},
+  {id: 4, videoName: 'name four', url: `${videoLinks}video4.mp4`},
+  {id: 5, videoName: 'name Five', url: `${videoLinks}video5.mp4`},
+  {id: 6, videoName: 'name Six', url: `${videoLinks}video6.mp4`},
 ];
 
 function Video() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="VIDEOS" />

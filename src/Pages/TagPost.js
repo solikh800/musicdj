@@ -18,10 +18,11 @@ function TagPost() {
   const myParams = useParams();
 
   useEffect(() => {
+    window.scrollTo(0, 250);
     dispatch(fullDataCategory());
     dispatch(fullTagPost(myParams.tag));
     dispatch(fullRecentPosts());
-  }, []);
+  }, [dispatch, myParams.tag]);
 
   return (
     <>
@@ -104,7 +105,7 @@ function TagPost() {
             </p>
             <p className="text-gray-400 text-sm mt-5">
               If you don't have money on a rainy day, in case of an emergency
-              (e.g. emergency of car repairs) you have to pay by credit card or
+              e.g. emergency of car repairs you have to pay by credit card or
               get into new debts. Keep on account of at least $1000 in case of
               unexpected expenses. And gradually increase the "airbag" to an
               amount equal to your income for up to three-six months.
@@ -164,11 +165,9 @@ function TagPost() {
                       />
                     </NavLink>
                     <NavLink to={`/blog/${item._id}`}>
-                      <NavLink to={`/blog/category/${item._id}`}>
-                        <h3 className="hover:text-white text-sm text-gray-300 cursor-pointer mb-10">
-                          {item.title}
-                        </h3>
-                      </NavLink>
+                      <h3 className="hover:text-white text-sm text-gray-300 cursor-pointer mb-10">
+                        {item.title}
+                      </h3>
                     </NavLink>
                   </div>
                 );

@@ -21,10 +21,12 @@ function BlogPost() {
     dispatch(fullPost(myParams.id));
     dispatch(fullDataCategory());
     dispatch(fullRecentPosts());
-  }, []);
+    window.scrollTo(0, 250);
+  }, [dispatch, myParams.id]);
 
   const getData = id => {
     dispatch(fullPost(id));
+    window.scrollTo(0, 250);
   };
 
   // let bodyResult = new DOMParser().parseFromString(post.body, 'text/xml');
@@ -85,7 +87,7 @@ function BlogPost() {
                 {post.tag &&
                   post.tag.map(item => {
                     return (
-                      <NavLink key={item} to={`tag/${item}`}>
+                      <NavLink key={item} to={`/blog/tags/${item}`}>
                         <p className=" text-white text-xs lg:text-sm border-2 p-1 rounded-lg border-gray-600 hover:text-purple-600 mx-2 cursor-pointer ">
                           {item}
                         </p>

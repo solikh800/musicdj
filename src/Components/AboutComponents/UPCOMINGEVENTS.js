@@ -3,12 +3,13 @@ import {NavLink} from 'react-router-dom';
 import Icon from '../../Assets/Svg/Icon';
 import AppBtn from '../appBtn';
 
+const imageLink = 'http://dl.mazanddl.ir/djsoli/abuot/';
+
 const eventData = [
   {
     id: 1,
     date: '04 DECEMBER, 2018',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-blog-img02.jpg',
+    imageUrl: `${imageLink}image01.jpg`,
     title: 'FOUND FESTIVAL 2018',
     subTitle:
       'The event has been turning the park into a sun-kissed musical paradise for the past three years.',
@@ -17,8 +18,7 @@ const eventData = [
   {
     id: 2,
     date: '07 MAY, 2018',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-blog-img04.jpg',
+    imageUrl: `${imageLink}image01.jpg`,
     title: 'AZKENA ROCK FESTIVAL 2018',
     subTitle:
       'This is a two-day extravaganza in the north of Spain. It encompasses every niche of the genre, including everything from rock to pop and rap music.',
@@ -27,8 +27,7 @@ const eventData = [
   {
     id: 3,
     date: '01 JANUARY, 2018',
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-blog-img03.jpg',
+    imageUrl: `${imageLink}image01.jpg`,
     title: 'MAKE MUSIC PASADENA',
     subTitle:
       'The all-ages summer music festival manages to squeeze more than 150 concerts into a single day.',
@@ -62,14 +61,18 @@ const UPCOMINGEVENTS = () => {
               <div className="md:col-span-4" />
               {item.id === state.id ? (
                 <div className="md:col-span-8 py-4 px-7">
-                  <img
-                    className="rounded-lg overflow-hidden"
-                    src={item.imageUrl}
-                    alt={item.title}
-                  />
-                  <h4 className="text-gray-100 hover:text-pink-600 cursor-pointer font-bold text-lg mt-3">
-                    {item.title}
-                  </h4>
+                  <NavLink to="/blog">
+                    <img
+                      className="rounded-lg overflow-hidden cursor-pointer"
+                      src={item.imageUrl}
+                      alt={item.title}
+                    />
+                  </NavLink>
+                  <NavLink to="/blog">
+                    <h4 className="text-gray-100 hover:text-pink-600 cursor-pointer font-bold text-lg mt-3">
+                      {item.title}
+                    </h4>
+                  </NavLink>
                   <p className="text-gray-400 text-sm mb-5">{item.subTitle}</p>
                   <NavLink to="/blog">
                     <AppBtn className="bg-pink-500 hover:bg-pink-700">

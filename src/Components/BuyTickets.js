@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import * as Yup from 'yup';
 import {AppForm, AppFormFeild, SubmitButton} from './../Components/form';
 import {ToastContainer, toast} from 'react-toastify';
-import {sendMessage} from './../Services/server';
 import ProgresBar from '../Components/ProgresBar';
 import Icon from './../Assets/Svg/Icon/index';
 

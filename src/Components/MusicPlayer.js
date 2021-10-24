@@ -85,7 +85,7 @@ const MusicPlayer = ({url, musicName}) => {
   return (
     <div className="w-full sm:w-2/3 lg:w-1/2 xl:w-1/3">
       <audio ref={audio}>
-        <source src={url} type="audio/mpeg" />
+        <source src={url} />
         Your browser does not support the audio element.
       </audio>
       <div>

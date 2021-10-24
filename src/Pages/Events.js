@@ -16,7 +16,8 @@ function Events() {
 
   useEffect(() => {
     dispatch(fullDataEvent());
-  }, []);
+    window.scrollTo(0, 0);
+  }, [dispatch]);
 
   const openModal = (title, price) => {
     setIitleModal({

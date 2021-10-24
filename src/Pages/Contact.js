@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Baner from '../Components/Baner';
 import * as Yup from 'yup';
 import {AppForm, AppFormFeild, SubmitButton} from './../Components/form';
@@ -50,6 +50,9 @@ function Contact() {
       }, 1000);
     }
   };
+  useEffect(() => {
+    window.scrollTo(0, 200);
+  }, []);
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="CONTACTS" />

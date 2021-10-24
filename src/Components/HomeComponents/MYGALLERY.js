@@ -2,41 +2,37 @@ import React, {useState} from 'react';
 import ImageContainer from '../ImageContainer';
 import ImageModal from './../ImageModal';
 
+const imagesLink = 'http://dl.mazanddl.ir/djsoli/homegallery/';
+
 const data = [
   {
     id: 1,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img01-bg.jpg',
+    imageUrl: `${imagesLink}gallery01.jpg`,
     imageName: 'consert',
   },
   {
     id: 2,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img02-bg.jpg',
+    imageUrl: `${imagesLink}gallery02.jpg`,
     imageName: 'music',
   },
   {
     id: 3,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img03-bg.jpg',
+    imageUrl: `${imagesLink}gallery03.jpg`,
     imageName: 'music',
   },
   {
     id: 4,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img04-bg.jpg',
+    imageUrl: `${imagesLink}gallery04.jpg`,
     imageName: 'consert',
   },
   {
     id: 5,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img05-bg.jpg',
+    imageUrl: `${imagesLink}gallery05.jpg`,
     imageName: 'boyDance',
   },
   {
     id: 6,
-    imageUrl:
-      'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-gallery-img06-bg.jpg',
+    imageUrl: `${imagesLink}gallery06.jpg`,
     imageName: 'girlDance',
   },
 ];

@@ -27,11 +27,12 @@ function Blog() {
     setPageIndex(index);
   };
   useEffect(() => {
+    window.scrollTo(0, 0);
     dispatch(fullDataBlog(1));
     dispatch(fullDataCategory());
     dispatch(fullRecentPosts());
     dispatch(fullPostNumber());
-  }, []);
+  }, [dispatch]);
 
   const moveEnd = () => {
     setPageIndex(finalPage);

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import Baner from '../Components/Baner';
 
 import {colors} from '../constants';
@@ -14,7 +14,9 @@ function Home() {
   const handleBuyTicket = () => {
     console.log('ticket');
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const styleComponents =
     'flex flex-col justify-center items-center 2xl:container mx-auto z-10 ';
   return (
@@ -41,11 +43,11 @@ function Home() {
         className={styleComponents}>
         <WHEREIPLAY />
       </div>
-      <div
+      {/* <div
         style={{backgroundColor: colors.secondary}}
         className={styleComponents}>
         <MUSICTRACKS />
-      </div>
+      </div> */}
       <div
         style={{backgroundColor: colors.background}}
         className={styleComponents}>

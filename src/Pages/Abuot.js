@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import Baner from '../Components/Baner';
 import Icon from '../Assets/Svg/Icon/';
 
@@ -7,22 +7,12 @@ import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
 import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 import UPCOMINGEVENTS from './../Components/AboutComponents/UPCOMINGEVENTS';
 import ReactHelmet from './../Components/ReactHelmet';
+
+const sliderImage = 'http://dl.mazanddl.ir/djsoli/abuot/';
 const dataImage = [
-  {
-    id: 1,
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-slider-img01.jpg',
-    title: 'image1',
-  },
-  {
-    id: 2,
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-slider-img02.jpg',
-    title: 'image2',
-  },
-  {
-    id: 3,
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/mt-1270-slider-img03.jpg',
-    title: 'image3',
-  },
+  {id: 1, url: `${sliderImage}01.jpg`, title: 'image1'},
+  {id: 2, url: `${sliderImage}02.jpg`, title: 'image2'},
+  {id: 3, url: `${sliderImage}03.jpg`, title: 'image3'},
 ];
 function Abuot() {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -41,7 +31,9 @@ function Abuot() {
       setSlideIndex(dataImage.length);
     }
   };
-
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const styleComponents =
     'flex flex-col justify-center items-center 2xl:container mx-auto z-10 ';
   return (
@@ -125,11 +117,11 @@ function Abuot() {
         className={styleComponents}>
         <WHEREIPLAY />
       </div>
-      <div
+      {/* <div
         style={{backgroundColor: colors.secondary}}
         className={styleComponents}>
         <MUSICTRACKS />
-      </div>
+      </div> */}
       <div
         style={{backgroundColor: colors.background}}
         className={styleComponents}>

@@ -2,22 +2,12 @@ import React from 'react';
 import {images} from '../../constants';
 import MusicPlayer from './../MusicPlayer';
 
+const musicLink = 'https://dl.mazanddl.ir/djsoli/homevideo/sound.mp3';
+
 const data = [
-  {
-    id: 1,
-    musicName: 'Best music',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/sound.mp3',
-  },
-  {
-    id: 2,
-    musicName: 'Nice music',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/sound.mp3',
-  },
-  {
-    id: 3,
-    musicName: 'Pop music',
-    url: 'https://template65298.motopreview.com/mt-demo/65200/65298/mt-content/uploads/2017/12/sound.mp3',
-  },
+  {id: 1, musicName: 'Best music', url: {musicLink}},
+  {id: 2, musicName: 'Nice music', url: {musicLink}},
+  {id: 3, musicName: 'Pop music', url: {musicLink}},
 ];
 
 const MUSICTRACKS = () => {

@@ -22,10 +22,11 @@ const Category = () => {
 
   const myParams = useParams();
   useEffect(() => {
+    window.scrollTo(0, 250);
     dispatch(fullDataCategory());
     dispatch(fullCategory(myParams.tag));
     dispatch(fullRecentPosts());
-  }, []);
+  }, [dispatch, myParams.tag]);
 
   return (
     <>
