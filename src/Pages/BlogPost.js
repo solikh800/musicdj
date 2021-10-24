@@ -75,7 +75,7 @@ function BlogPost() {
                 alt={post.title}
               />
               <div className="p-3">
-                <td
+                <div
                   className="text-gray-400 text-sm mb-5"
                   dangerouslySetInnerHTML={{__html: post.body}}
                 />
@@ -85,7 +85,7 @@ function BlogPost() {
                 {post.tag &&
                   post.tag.map(item => {
                     return (
-                      <NavLink to={`tag/${item}`}>
+                      <NavLink key={item} to={`tag/${item}`}>
                         <p className=" text-white text-xs lg:text-sm border-2 p-1 rounded-lg border-gray-600 hover:text-purple-600 mx-2 cursor-pointer ">
                           {item}
                         </p>
