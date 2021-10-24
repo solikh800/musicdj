@@ -31,7 +31,7 @@ function BlogPost() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="ONE OF THE POSTS" />
-      {post && <ReactHelmet title={post.title} />}
+      {post.title && <ReactHelmet title={post.title} />}
       <div
         style={{backgroundColor: colors.background}}
         className=" md:grid md:items-start md:grid-cols-4 md:gap-3 flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">

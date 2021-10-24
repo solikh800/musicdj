@@ -26,7 +26,7 @@ function TagPost() {
   return (
     <>
       <Baner title="READ ABOUT ME" subTitle="Tag List" />
-      <ReactHelmet title={myParams.tag} />
+      {myParams.tag && <ReactHelmet title={myParams.tag} />}
       <div
         style={{backgroundColor: colors.background}}
         className=" md:grid md:items-start md:grid-cols-4 md:gap-3 flex flex-col lg:w-5/6  justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
