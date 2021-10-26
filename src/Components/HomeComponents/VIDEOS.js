@@ -16,7 +16,7 @@ const data = [
 const VIDEOS = () => {
   return (
     <div className="flex w-full flex-col my-20 px-6">
-      <h1 className="text-white text-3xl my-8">------ VIDEOS</h1>
+      <h1 className="text-white text-2xl my-8">--- VIDEOS</h1>
       <div className="md:grid md:grid-cols-2 2xl:gap-48 gap-3">
         {data.map(item => {
           return (

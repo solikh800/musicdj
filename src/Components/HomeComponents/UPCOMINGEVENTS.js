@@ -33,22 +33,26 @@ const UPCOMINGEVENTS = () => {
   return (
     <div className="flex w-full flex-col my-20 px-6">
       <div>
-        <h1 className="text-white text-3xl my-8">
-          ------ UPCOMING <p className="text-red-500 ml-24">EVENTS</p>
+        <h1 className="text-white text-2xl my-8">
+          --- UPCOMING <p className="text-red-500 ml-12">EVENTS</p>
         </h1>
         <div className="md:grid md:grid-cols-3 md:gap-4 justify-center px-4 ">
           {data.map(item => {
             return (
               <div key={item.id} className="flex flex-row my-6 ">
-                <div className="text-red-500 text-3xl xl:text-4xl font-bold font-mono pr-5">
+                <div className="text-red-500 text-2xl xl:text-3xl font-bold font-mono pr-5">
                   <p>{item.day}</p>
                 </div>
                 <div>
-                  <h5 className="text-gray-400 xl:text-lg">{item.date}</h5>
-                  <h3 className="text-gray-50 text-xl xl:text-2xl py-1 hover:text-red-500 cursor-pointer">
+                  <h5 className="text-gray-400 text-sm xl:text-base">
+                    {item.date}
+                  </h5>
+                  <h3 className="text-gray-50 text-lg xl:text-2xl py-1 hover:text-red-500 cursor-pointer">
                     {item.title}
                   </h3>
-                  <p className="text-gray-500 xl:text-lg">{item.subTitle}</p>
+                  <p className="text-gray-500 text-sm xl:text-base">
+                    {item.subTitle}
+                  </p>
                 </div>
               </div>
             );

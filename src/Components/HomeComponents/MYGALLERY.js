@@ -46,8 +46,8 @@ const MYGALLERY = () => {
   return (
     <div className="flex w-full flex-col my-20 px-6">
       <div>
-        <h1 className="flex flex-row text-white text-3xl my-8">
-          ------ MY <p className="text-red-500 ml-3"> GALLERY</p>
+        <h1 className="flex flex-row text-white text-2xl my-8">
+          --- MY <p className="text-red-500 ml-3"> GALLERY</p>
         </h1>
       </div>
       <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 ">
