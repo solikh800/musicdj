@@ -9,7 +9,7 @@ const AppFormFeild = ({name, textArea, ...rest}) => {
     return (
       <div className="flex flex-col items-center ">
         <textarea
-          className="m-1 p-3 w-3/4 text-sm bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200 focus:border-transparent h-56 "
+          className="m-1 p-3 w-3/4 text-xs md:text-sm bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200 focus:border-transparent h-56 "
           onChange={event => setFieldValue(name, event.target.value)}
           value={values[name]}
           onBlur={() => setFieldTouched(name)}
@@ -22,7 +22,7 @@ const AppFormFeild = ({name, textArea, ...rest}) => {
   return (
     <div className="flex flex-col  items-center ">
       <input
-        className="m-1 p-3 w-3/4 text-sm bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200 focus:border-transparent "
+        className="m-1 p-3 w-3/4 text-xs md:text-sm bg-gray-700 text-white rounded-lg focus:outline-none focus:ring-1 focus:ring-gray-200 focus:border-transparent "
         onChange={event => setFieldValue(name, event.target.value)}
         value={values[name]}
         onBlur={() => setFieldTouched(name)}

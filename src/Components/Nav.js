@@ -15,7 +15,7 @@ function Nav({name, to, iconName, onClick}) {
       <NavLink
         exact
         activeStyle={activeStyleClass}
-        className="  md:w-min text-xs py-3 flex w-36 font-bold px-2 md:pb-2 text-white "
+        className="  md:w-min text-xs pt-2 flex w-36 font-bold px-2 md:pb-2 text-white "
         to={to}>
         <p className="w-max">{name.toUpperCase()}</p>
       </NavLink>

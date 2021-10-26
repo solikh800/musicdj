@@ -6,7 +6,7 @@ import {images} from '../constants';
 const SlideDrawer = ({onClick}) => {
   return (
     <div className="md:hidden h-screen p-4 z-50">
-      <div className="absolute  md:hidden left-2/4 ml-5 sm:ml-10 ">
+      <div className="absolute md:hidden left-2/4 ml-5 sm:ml-10 ">
         <Icon
           name="close"
           className="text-red-600 w-8 sm:w-9"

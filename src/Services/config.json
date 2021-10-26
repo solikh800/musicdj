@@ -1,3 +1,4 @@
 {
-  "localApi": "https://musicdjapi.mazanddl.ir"
+  "localApi": "http://127.0.0.1:7000",
+  "Api": "https://musicdjapi.mazanddl.ir"
 }

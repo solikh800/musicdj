@@ -1,10 +1,10 @@
-export const USER_TOKEN = 'USER_TOKEN';
+export const USER_DATA = 'USER_DATA';
 
-export const loginToken = token => {
+export const userData = data => {
   return dispatch => {
     dispatch({
-      type: USER_TOKEN,
-      token: token,
+      type: USER_DATA,
+      data,
     });
   };
 };

@@ -34,3 +34,12 @@ export const getPostByTag = tag => {
 export const getPostByCategory = tag => {
   return http.get(`${config.localApi}/getpostbycategory/${tag}`);
 };
+
+//users
+export const register = data => {
+  data.email = data.email.toLowerCase();
+  return http.post(`${config.localApi}/users/register`, JSON.stringify(data));
+};
+export const login = data => {
+  return http.post(`${config.localApi}/users/login`, JSON.stringify(data));
+};

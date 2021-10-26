@@ -1,13 +1,13 @@
-import {USER_TOKEN} from '../actions/user';
+import {USER_DATA} from '../actions/user';
 
 const initialState = {
-  userToken: null,
+  userData: null,
 };
 
 export const userReducer = (state = initialState, action) => {
   switch (action.type) {
-    case USER_TOKEN:
-      return {...state, userToken: action.token};
+    case USER_DATA:
+      return {...state, userData: action.data};
     default:
       return state;
   }

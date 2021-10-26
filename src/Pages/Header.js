@@ -6,16 +6,16 @@ import {colors, images} from '../constants';
 
 function NavBar() {
   const [backGround, setbackGround] = useState('md:bg-transparent');
-  const [margin, setmargin] = useState('my-10');
+  const [margin, setmargin] = useState('my-6');
   const [drawerIsOpen, setDrawerIsOpen] = useState(false);
   const [translate, setTranslate] = useState('-translate-x-full h-0');
   const changeBackgroundNav = () => {
     if (window.scrollY >= 100) {
       setbackGround('md:bg-gray-800');
-      setmargin('my-4');
+      setmargin('my-3');
     } else {
       setbackGround('md:bg-transparent');
-      setmargin('my-10');
+      setmargin('my-6');
     }
   };
 
