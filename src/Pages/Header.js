@@ -27,7 +27,10 @@ function NavBar() {
   };
   const closeDrawer = () => {
     setDrawerIsOpen(false);
-    setTranslate('-translate-x-full h-0');
+    setTranslate('-translate-x-full ');
+    setTimeout(() => {
+      setTranslate('-translate-x-full h-0');
+    }, 200);
   };
   return (
     <div className={'fixed flex-row mx-auto w-full z-40 ' + backGround}>
