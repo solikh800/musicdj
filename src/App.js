@@ -1,6 +1,5 @@
 import React from 'react';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
-import loadable from '@loadable/component';
 import store from './Redux/index';
 import {Provider} from 'react-redux';
 import {PersistGate} from 'redux-persist/integration/react';
@@ -28,21 +27,6 @@ import Register from './Pages/Register';
 import Dashboard from './Pages/Dashboard';
 
 const peristedStore = persistStore(store);
-
-// const Home = loadable(() => import('./Pages/Home'));
-// const Abuot = loadable(() => import('./Pages/Abuot'));
-// const Blog = loadable(() => import('./Pages/Blog'));
-// const BlogPost = loadable(() => import('./Pages/BlogPost'));
-// const Contact = loadable(() => import('./Pages/Contact'));
-// const Events = loadable(() => import('./Pages/Events'));
-// const Gallery = loadable(() => import('./Pages/Gallery'));
-// const Header = loadable(() => import('./Pages/Header'));
-// const Services = loadable(() => import('./Pages/Services'));
-// const Video = loadable(() => import('./Pages/Video'));
-// const Discography = loadable(() => import('./Pages/Discography'));
-// const NotFound = loadable(() => import('./Pages/NotFound'));
-// const TagPost = loadable(() => import('./Pages/TagPost'));
-// const Category = loadable(() => import('./Pages/Category'));
 
 export default function App() {
   return (
