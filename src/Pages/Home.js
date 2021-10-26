@@ -5,7 +5,6 @@ import {colors} from '../constants';
 import ABOUTALLY from '../Components/HomeComponents/ABOUTALLY';
 import UPCOMINGEVENTS from './../Components/HomeComponents/UPCOMINGEVENTS';
 import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
-import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 import VIDEOS from './../Components/HomeComponents/VIDEOS';
 import MYGALLERY from './../Components/HomeComponents/MYGALLERY';
 import ReactHelmet from './../Components/ReactHelmet';
@@ -43,11 +42,6 @@ function Home() {
         className={styleComponents}>
         <WHEREIPLAY />
       </div>
-      {/* <div
-        style={{backgroundColor: colors.secondary}}
-        className={styleComponents}>
-        <MUSICTRACKS />
-      </div> */}
       <div
         style={{backgroundColor: colors.background}}
         className={styleComponents}>

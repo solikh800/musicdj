@@ -1,10 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import Baner from '../Components/Baner';
 import Icon from '../Assets/Svg/Icon/';
-
 import {colors} from '../constants';
 import WHEREIPLAY from './../Components/HomeComponents/WHEREIPLAY';
-import MUSICTRACKS from './../Components/HomeComponents/MUSICTRACKS';
 import UPCOMINGEVENTS from './../Components/AboutComponents/UPCOMINGEVENTS';
 import ReactHelmet from './../Components/ReactHelmet';
 
@@ -117,11 +115,6 @@ function Abuot() {
         className={styleComponents}>
         <WHEREIPLAY />
       </div>
-      {/* <div
-        style={{backgroundColor: colors.secondary}}
-        className={styleComponents}>
-        <MUSICTRACKS />
-      </div> */}
       <div
         style={{backgroundColor: colors.background}}
         className={styleComponents}>

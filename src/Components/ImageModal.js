@@ -44,19 +44,15 @@ const ImageModal = ({hiddenModalComponent, data, index}) => {
             </div>
             <Icon
               onClick={hiddenModalComponent}
-              className="absolute right-0 w-10 text-red-500"
+              className="absolute right-0 w-10 z-50 text-red-500"
               name="close"
             />
-            <Icon
-              onClick={backImage}
-              className="absolute bottom-1/2 w-11"
-              name="left"
-            />
-            <Icon
-              onClick={nextImage}
-              className="absolute right-0 bottom-1/2 w-11"
-              name="right"
-            />
+            <div className="absolute flex justify-center items-center h-full">
+              <Icon onClick={backImage} className=" w-11" name="left" />
+            </div>
+            <div className="absolute flex justify-center items-center right-0 h-full">
+              <Icon onClick={nextImage} className=" w-11" name="right" />
+            </div>
           </div>
         </div>
       </div>
