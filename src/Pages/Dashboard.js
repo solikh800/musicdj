@@ -18,8 +18,8 @@ const Dashboard = ({history}) => {
     history.replace('/');
   }
   const exit = () => {
-    dispatch(userData(null));
     history.replace('/');
+    dispatch(userData(null));
   };
   return (
     <>
