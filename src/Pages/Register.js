@@ -92,7 +92,7 @@ function Register({history}) {
               <AppFormFeild
                 name="password"
                 type="password"
-                placeholder="create a password *"
+                placeholder="create a Password *"
               />
             </div>
             <div className="flex w-full justify-center items-center text-center my-3">

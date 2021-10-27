@@ -29,7 +29,6 @@ function Login({history}) {
           position: 'top-right',
           closeOnClick: true,
         });
-        console.log(data.token);
         dispatch(userData(data.token));
         resetForm();
         setVisible(false);
@@ -85,7 +84,7 @@ function Login({history}) {
               <AppFormFeild
                 name="userName"
                 type="text"
-                placeholder="Enter your userName *"
+                placeholder="Enter your UserName *"
               />
 
               <AppFormFeild
