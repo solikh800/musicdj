@@ -50,7 +50,7 @@ const MYGALLERY = () => {
           --- MY <p className="text-red-500 ml-3"> GALLERY</p>
         </h1>
       </div>
-      <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-6 gap-3 ">
+      <div className=" grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-3 ">
         {data.map((item, index) => {
           return (
             <ImageContainer

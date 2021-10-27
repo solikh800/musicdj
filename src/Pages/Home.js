@@ -17,7 +17,7 @@ function Home() {
     window.scrollTo(0, 0);
   }, []);
   const styleComponents =
-    'flex flex-col justify-center items-center 2xl:container mx-auto z-10 ';
+    'flex flex-col justify-center items-center mx-auto z-10 xl:container mx-auto ';
   return (
     <>
       <Baner
@@ -27,30 +27,34 @@ function Home() {
         date="17 JANUARY, 2020"
       />
       <ReactHelmet title="MUSIC SOLI" />
-      <div
-        style={{backgroundColor: colors.background}}
-        className="flex w-full justify-center items-center 2xl:container mx-auto z-10 mt-72 lg:pt-24 ">
-        <ABOUTALLY />
-      </div>
-      <div
-        style={{backgroundColor: colors.secondary}}
-        className={styleComponents}>
-        <UPCOMINGEVENTS />
-      </div>
-      <div
-        style={{backgroundColor: colors.background}}
-        className={styleComponents}>
-        <WHEREIPLAY />
-      </div>
-      <div
-        style={{backgroundColor: colors.background}}
-        className={styleComponents}>
-        <VIDEOS />
-      </div>
-      <div
-        style={{backgroundColor: colors.secondary}}
-        className={styleComponents}>
-        <MYGALLERY />
+      <div>
+        <div className="xl:container  mx-auto">
+          <div
+            style={{backgroundColor: colors.background}}
+            className="flex w-full justify-center items-center mx-auto z-10 mt-72 lg:pt-24 ">
+            <ABOUTALLY />
+          </div>
+        </div>
+        <div className="w-full" style={{backgroundColor: colors.secondary}}>
+          <div className={styleComponents}>
+            <UPCOMINGEVENTS />
+          </div>
+        </div>
+        <div
+          style={{backgroundColor: colors.background}}
+          className={styleComponents}>
+          <WHEREIPLAY />
+        </div>
+        <div className="w-full" style={{backgroundColor: colors.secondary}}>
+          <div className={styleComponents}>
+            <VIDEOS />
+          </div>
+        </div>
+        <div
+          style={{backgroundColor: colors.background}}
+          className={styleComponents}>
+          <MYGALLERY />
+        </div>
       </div>
     </>
   );
